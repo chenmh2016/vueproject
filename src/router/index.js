@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import First from '@/components/First'
 import TodoList from '@/components/TodoList/TodoList'
+import ExecComp from '@/components/EventHandle/ExecComp'
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +22,11 @@ export default new Router({
       path: '/todoList',
       name: 'TodoList',
       component: TodoList
+    },
+    {
+      path: '/exec',
+      name: 'exec',
+      component: ExecComp
     }
   ]
 })
