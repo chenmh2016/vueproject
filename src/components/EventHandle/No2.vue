@@ -14,7 +14,7 @@ export default {
   methods: {
     greet: function (event) {
       // this在方法中指向当前vue实例
-      alert('hello' + this.name + '!');
+      alert('hello' + this.name + '!')
       // event是原生dom事件
       if (event) {
         alert(event.target.tagName)
