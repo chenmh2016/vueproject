@@ -10,6 +10,8 @@
 <script>
 import BaseInputText from './BaseInputText'
 import TodoListItem from './TodoListItem'
+import storage from '../../model/storage'
+console.log(storage)
 let nextTodoId = 1
 export default {
   components: {
@@ -20,19 +22,23 @@ export default {
     return {
       newTodoText: '',
       todos: [
-        { id: nextTodoId++,
-          text: 'learn vue'
-        },
-        {
-          id: nextTodoId++,
-          text: 'learn ng'
-        },
-        {
-          id: nextTodoId++,
-          text: 'learn react'
-        }
+        // { id: nextTodoId++,
+        //   text: 'learn vue'
+        // },
+        // {
+        //   id: nextTodoId++,
+        //   text: 'learn ng'
+        // },
+        // {
+        //   id: nextTodoId++,
+        //   text: 'learn react'
+        // }
       ]
     }
+  },
+  mounted () {
+    console.log(storage.get('todos'))
+    this.todos = storage.get('todos')
   },
   methods: {
     addTodo () {
@@ -42,6 +48,7 @@ export default {
           id: nextTodoId++,
           text: trimmedText
         })
+        storage.set('todos', this.todos)
         this.newTodoText = ''
       }
     },
@@ -49,6 +56,7 @@ export default {
       this.todos = this.todos.filter(todo => {
         return todo.id !== idToRemove
       })
+      storage.set('todos', this.todos)
     }
   }
 }
