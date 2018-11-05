@@ -1,16 +1,24 @@
 <template>
   <div id="home">
-    我是新闻组件{{this.$store.state.count}} ---{{this.$store.state.getters.computedCount}}
+    我是新闻组件{{this.$store.state.count}} ---{{this.$store.getters.computedCount}}
     <button @click="incCount1()">click</button>
     <br>
     <ul>
-      <li v-for="(item,index) in list" v-bind:key="index">{{item}}</li>
+      <button @click="goHome()">通过js跳转到home页面</button>
+      <p>动态路由传值</p>
+      <li v-for="(item,index) in list" v-bind:key="index" >
+        <router-link :to="'/Content/'+index" >{{index}}---{{item}}</router-link>
+      </li>
+      <p>get传值</p>
+      <li v-for="(item,index) in list" v-bind:key="index" >
+        <router-link :to="'/GetContent?aid='+index+'99'" >{{index}}---{{item}}</router-link>
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
-import store from '../vuex/store'
+import store from '../../vuex/store'
 export default {
   store,
   data () {
@@ -21,6 +29,9 @@ export default {
     }
   },
   methods: {
+    goHome () {
+      this.$route.push('home')
+    },
     requestData () {
       console.log('请求数据了')
       // var api = '/mock/test.json'
