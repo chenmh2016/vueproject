@@ -8,6 +8,7 @@ import Home from '@/components/home'
 import News from '@/components/Router/news'
 import Content from '@/components/Router/Content'
 import GetContent from '@/components/Router/GetContent'
+import Dashboard from '@/components/Dashboard'
 Vue.use(Router)
 
 // export default new Router({
@@ -56,6 +57,11 @@ const routes = [
     path: '/',
     name: 'HelloWorld',
     component: HelloWorld
+  },
+  {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: Dashboard
   },
   {
     path: '/first',
