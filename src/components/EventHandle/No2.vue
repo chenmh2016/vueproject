@@ -1,6 +1,9 @@
 <template>
   <div>事件 处理 no2
     <button v-on:click='greet'>greet</button>
+  <span>{{msg}}</span>
+    <button @click="updateMessage">msg改变</button>
+
   </div>
 </template>
 
@@ -8,10 +11,18 @@
 export default {
   data () {
     return {
-      name: 'vue.js'
+      name: 'vue.js',
+      msg: 'not updated'
     }
   },
   methods: {
+    updateMessage: function () {
+      this.msg = 'updated'
+      console.log(this.$el.textContent)
+      this.$nextTick(function () {
+        console.log(this.$el.textContent)
+      })
+    },
     greet: function (event) {
       // this在方法中指向当前vue实例
       alert('hello' + this.name + '!')

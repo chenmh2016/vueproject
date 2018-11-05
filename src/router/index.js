@@ -53,11 +53,11 @@ const routes = [
     redirect: '/todoList'
 
   },
-  {
-    path: '/',
-    name: 'HelloWorld',
-    component: HelloWorld
-  },
+  // {
+  //   path: '/',
+  //   name: 'HelloWorld',
+  //   component: HelloWorld
+  // },
   {
     path: '/dashboard',
     name: 'dashboard',

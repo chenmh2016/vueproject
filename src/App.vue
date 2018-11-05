@@ -1,17 +1,23 @@
 <template>
-  <div id="app">
+  <div id="app layout">
     <!--<img src="./assets/logo.png">-->
-    <router-link to="/first">First</router-link>
-    <router-link to="/todoList">todoList</router-link>
-    <router-link to="/home">home</router-link>
-    <router-link to="/news">news</router-link>
-    <router-view/>
+    <div class="left">
+      <SideBar></SideBar>
+    </div>
+   <div class="right">
+     <router-view/>
+   </div>
+
   </div>
 </template>
 
 <script>
+import SideBar from './components/Common/SideBar'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    SideBar
+  }
 }
 </script>
 
@@ -24,4 +30,12 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+  .left{
+    width: 300px;
+    float:left
+  }
+  .right{
+    width: 500px;
+    float:left
+  }
 </style>
