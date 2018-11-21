@@ -1,51 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import First from '@/components/First'
 import TodoList from '@/components/TodoList/TodoList'
 import ExecComp from '@/components/EventHandle/ExecComp'
-import Home from '@/components/home'
+import Home from '@/components/Home/home'
 import News from '@/components/Router/news'
 import Content from '@/components/Router/Content'
 import GetContent from '@/components/Router/GetContent'
-import Dashboard from '@/components/Dashboard'
+import Dashboard from '@/components/GridLayout/Dashboard'
 import Class1 from '@/components/Class/Class1'
 Vue.use(Router)
-
-// export default new Router({
-//   routes: [
-//     {
-//       path: '/',
-//       name: 'HelloWorld',
-//       component: HelloWorld
-//     },
-//     {
-//       path: '/first',
-//       name: 'First',
-//       component: First
-//     },
-//     {
-//       path: '/todoList',
-//       name: 'TodoList',
-//       component: TodoList
-//     },
-//     {
-//       path: '/exec',
-//       name: 'exec',
-//       component: ExecComp
-//     },
-//     {
-//       path: '/home',
-//       name: 'home',
-//       component: Home
-//     },
-//     {
-//       path: '/news',
-//       name: 'news',
-//       component: News
-//     }
-//   ]
-// })
-
 // 定义路由
 const routes = [
   {
@@ -53,11 +16,6 @@ const routes = [
     redirect: '/todoList'
 
   },
-  // {
-  //   path: '/',
-  //   name: 'HelloWorld',
-  //   component: HelloWorld
-  // },
   {
     path: '/dashboard',
     name: 'dashboard',
@@ -67,11 +25,6 @@ const routes = [
     path: '/class',
     name: 'Class',
     component: Class1
-  },
-  {
-    path: '/first',
-    name: 'First',
-    component: First
   },
   {
     path: '/todoList',

@@ -53,10 +53,10 @@
 <script>
 // import Vue from 'vue'
 import VueGridLayout from 'vue-grid-layout'
-import News from './Router/News'
+import News from '../Router/News'
 import SelectModalCom from './SelectModalCom'
 
-import customDragElement from './customDragElement'
+import customDragElement from './CustomDragElement'
 //
 // Vue.use(VueGridLayout)
 

@@ -1,23 +1,25 @@
 <template>
-  <Row>
-    <i-col span="8">
-      <Menu ref="left_menu" :active-name='activeName' :open-names="['5']" theme="light" width="200px" style="height: 100%;padding-top: 20px;">
-        <Menu-item name="1" to="/first">First</Menu-item>
-        <Menu-item name="2" to="/todoList">todoList</Menu-item>
-        <Menu-item name="3" to="/home">home</Menu-item>
-        <Menu-item name="4" to="/news">news</Menu-item>
-        <Menu-item name="5" to="/dashboard">dashboard</Menu-item>
-        <Menu-item name="6" to="/class">循环组件选中样式</Menu-item>
-        <!--<Submenu name="5" v-if="this.$store.state.permit.admin">-->
-          <!--<template slot="title">系统管理</template>-->
-          <!--<Menu-item name="5-1" to="/management/project">项目管理</Menu-item>-->
-          <!--<Menu-item name="5-2" to="/management/user">用户管理</Menu-item>-->
-          <!--<Menu-item name="5-3" to="/management/user_group">用户组管理</Menu-item>-->
-          <!--<Menu-item name="5-4" to="/management/user_group_config">用户组权限配置</Menu-item>-->
-        <!--</Submenu>-->
-      </Menu>
-    </i-col>
-  </Row>
+  <Menu active-name="1-2" theme="light" width="auto" :open-names="['1']">
+    <Submenu name="1">
+      <template slot="title">
+        <Icon type="ios-navigate"></Icon>
+        杂七杂八
+      </template>
+      <MenuItem name="1-1" to="/todoList">TodoList</MenuItem>
+      <MenuItem name="1-2" to="/home">home</MenuItem>
+      <MenuItem name="1-3" to="/news">news</MenuItem>
+      <MenuItem name="1-4" to="/dashboard">dashboard</MenuItem>
+      <MenuItem name="1-5" to="/class">循环组件选中样式</MenuItem>
+    </Submenu>
+    <Submenu name="2">
+      <template slot="title">
+        <Icon type="ios-keypad"></Icon>
+        组件的练习iview
+      </template>
+      <MenuItem name="2-1">Option 1</MenuItem>
+      <MenuItem name="2-2">Option 2</MenuItem>
+    </Submenu>
+  </Menu>
 </template>
 <style>
 
