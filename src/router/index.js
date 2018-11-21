@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import First from '@/components/First'
 import TodoList from '@/components/TodoList/TodoList'
 import ExecComp from '@/components/EventHandle/ExecComp'
@@ -9,6 +8,7 @@ import News from '@/components/Router/news'
 import Content from '@/components/Router/Content'
 import GetContent from '@/components/Router/GetContent'
 import Dashboard from '@/components/Dashboard'
+import Class1 from '@/components/Class/Class1'
 Vue.use(Router)
 
 // export default new Router({
@@ -62,6 +62,11 @@ const routes = [
     path: '/dashboard',
     name: 'dashboard',
     component: Dashboard
+  },
+  {
+    path: '/class',
+    name: 'Class',
+    component: Class1
   },
   {
     path: '/first',

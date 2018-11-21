@@ -41,14 +41,12 @@
                    @resized="resized"
                    @moved="moved"
         >
-          <!--<custom-drag-element :text="item.i"></custom-drag-element>-->
-          <component v-bind:is="item.component"> </component>
-       <!--{{item.i}}-->
-          <button style="position: absolute;right: 10px; bottom: 0;" @click="clicked">CLICK ME!</button>
+          <!--<component v-bind:is="item.component"> </component>-->
+          <button style="position: absolute;right: 10px; bottom: 0;" @click="clicked()">CLICK ME!</button>
         </grid-item>
       </grid-layout>
     </div>
-
+    <select-modal-com v-bind:modalShow="modalShow"  v-on:cancelModal="cancelModal"/>
   </div>
 </template>
 
@@ -56,6 +54,9 @@
 // import Vue from 'vue'
 import VueGridLayout from 'vue-grid-layout'
 import News from './Router/News'
+import SelectModalCom from './SelectModalCom'
+
+import customDragElement from './customDragElement'
 //
 // Vue.use(VueGridLayout)
 
@@ -75,7 +76,9 @@ export default {
   components: {
     GridLayout,
     GridItem,
-    News
+    News,
+    customDragElement,
+    SelectModalCom
   },
   data () {
     return {
@@ -87,7 +90,8 @@ export default {
       responsive: true,
       rowHeight: 30,
       colNum: 12,
-      index: 0
+      index: 0,
+      modalShow: false
     }
   },
   mounted () {
@@ -95,7 +99,11 @@ export default {
   },
   methods: {
     clicked: function () {
-      window.alert('CLICK!')
+      console.log('ok')
+      this.modalShow = true
+    },
+    cancelModal: function () {
+      this.modalShow = false
     },
     increaseWidth: function () {
       let width = document.getElementById('content').offsetWidth

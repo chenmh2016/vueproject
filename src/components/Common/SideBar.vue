@@ -6,6 +6,8 @@
         <Menu-item name="2" to="/todoList">todoList</Menu-item>
         <Menu-item name="3" to="/home">home</Menu-item>
         <Menu-item name="4" to="/news">news</Menu-item>
+        <Menu-item name="5" to="/dashboard">dashboard</Menu-item>
+        <Menu-item name="6" to="/class">循环组件选中样式</Menu-item>
         <!--<Submenu name="5" v-if="this.$store.state.permit.admin">-->
           <!--<template slot="title">系统管理</template>-->
           <!--<Menu-item name="5-1" to="/management/project">项目管理</Menu-item>-->
