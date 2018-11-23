@@ -8,6 +8,7 @@ import Content from '@/components/Router/Content'
 import GetContent from '@/components/Router/GetContent'
 import Dashboard from '@/components/GridLayout/Dashboard'
 import Class1 from '@/components/Class/Class1'
+import AddInput from '@/components/Iview/AddInput'
 Vue.use(Router)
 // 定义路由
 const routes = [
@@ -55,6 +56,11 @@ const routes = [
     path: '/GetContent', // get传值
     name: 'GetContent',
     component: GetContent
+  },
+  {
+    path: '/addInput',
+    name: 'addInput',
+    component: AddInput
   }
 ]
 // 实例化Router

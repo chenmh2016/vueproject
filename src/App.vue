@@ -68,10 +68,10 @@
   </div>
 </template>
 <script>
-  import SideBar from './components/Common/SideBar'
-  export default {
-    components:{
-      SideBar
-    }
+import SideBar from './components/Common/SideBar'
+export default {
+  components: {
+    SideBar
   }
+}
 </script>

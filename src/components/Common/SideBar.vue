@@ -16,7 +16,7 @@
         <Icon type="ios-keypad"></Icon>
         组件的练习iview
       </template>
-      <MenuItem name="2-1">Option 1</MenuItem>
+      <MenuItem name="2-1" to="/addInput">点击增加input</MenuItem>
       <MenuItem name="2-2">Option 2</MenuItem>
     </Submenu>
   </Menu>
